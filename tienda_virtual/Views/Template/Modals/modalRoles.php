@@ -13,7 +13,7 @@
       <div class="tile">
         <div class="tile-body">
           <form id="formRol" name="formRol">
-            <input type="hidden" name="idRol" id="idRol" value="">
+           <input type="hidden" id="idRol" name="idRol"  value=""> 
             <div class="form-group">
                   <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre</font></font></label>
                   <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Nombre del Rol">
