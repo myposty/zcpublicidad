@@ -95,9 +95,15 @@ function fntEditRol(){
 			//obtener los datos a ser actualizados
 			var idrol = this.getAttribute("rl");
 			var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-			var ajaxetUser = base_url+'Roles/getRoles'+idrol;
-			request.open("GET",ajaxetUser,true);
+			var ajaxUrl = base_url+'Roles/getRoles'+idrol;
+			request.open("GET",ajaxUrl,true);
 			request.send();
+
+			request.onreadystatechange = function(){
+				if(request.readyState == 4 && request.status == 200){
+					console.log(request.responseText);
+				}
+			}
 
 			$('#modalFormRol').modal('show');
 		});
