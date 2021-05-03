@@ -45,7 +45,7 @@ class Roles extends Controllers{
 	public function getRol( int $idrol)
 	{
 		$intIdRol = intval(strClean($idrol));
-		if($intIdRol >0 )
+		if($intIdRol > 0 )
 		{
 			$arrData = $this->model->selectRol($intIdRol);
 			if(empty($arrData))
