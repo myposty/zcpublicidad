@@ -28,21 +28,25 @@ class Roles extends Controllers{
 
 			$arrData[$i]['options'] = '<div class="text-center">
 			
-			<button class="btn btn-secondary btn-sm btnPermisosRol" rl="'.$arrData[$i]['idrol'].'" title="Permisos"><i class="fas fa-key"></i></button>
-			<button class="btn btn-primary btn-sm btnEditRol" rl="'.$arrData[$i]['idrol'].'" title="Editar"><i class="fas fa-pencil-alt"></i></button>
-			<button class="btn btn-danger btn-sm btnDelRol" rl="'.$arrData[$i]['idrol'].'" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+			<button class="btn btn-secondary btn-sm btnPermisosRol" rl="'.$arrData[$i]['idrol'].'" title="Permisos">
+			<i class="fas fa-key"></i>
+			</button>
+
+			<button class="btn btn-primary btn-sm btnEditRol" rl="'.$arrData[$i]['idrol'].'" title="Editar">
+			<i class="fas fa-pencil-alt"></i>
+			</button>
+
+			<button class="btn btn-danger btn-sm btnDelRol" rl="'.$arrData[$i]['idrol'].'" title="Eliminar">
+			<i class="fas fa-trash-alt"></i>
+			</button>
 			</div>';
 		}
-
-
-
-
 		echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
 		die();
 	}
 
 
-	public function getRol( int $idrol)
+	public function getRol(int $idrol)
 	{
 		$intIdRol = intval(strClean($idrol));
 		if($intIdRol > 0 )
@@ -75,7 +79,6 @@ class Roles extends Controllers{
 		}else{
 			$arrResponse = array('status' => false, 'msg' => 'No es posible Guardar Los Datos');
 		}
-
 		echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
 		die();
 
