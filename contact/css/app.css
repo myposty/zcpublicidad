@@ -1,0 +1,144 @@
+body {
+
+    background-image: url(catarata.webp);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+div {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: rgba(38, 172, 255, 0.8);
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 300px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.show{
+    display: none;
+}
+
+.hide {
+    background: rgba(38, 172, 255, 0.8);
+    display: block;
+    z-index: 999;
+    box-sizing: border-box;
+    transition: 1s ease-in-out;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hide div {
+    transform: translate(30%, 30%);
+    background: initial;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hide img {
+    margin-left: 20px;
+    border-radius: 10px;
+
+
+}
+
+.hide h1 {
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    width: 250px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 7px;
+    transition: 1s ease-in-out;
+
+
+
+}
+
+
+
+
+#boton {
+    background: #31384a;
+    color: #fff;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@media screen and (max-width: 480px) {
+    form {
+        width: 100%;
+    }
+    .hide div {
+    transform: translate(20%, 30%);
+    background: initial;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+.contactar h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }

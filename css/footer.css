@@ -1,0 +1,72 @@
+footer {
+    margin-top: 10px;
+    
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    
+}
+
+.contenido {
+    width: 100%;
+    display: flex;
+}
+
+.contenido a{
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+}
+
+
+.redes{
+    margin-top: 20px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.redes a{
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    transition: .1s ease-in-out;
+}
+
+.redes a i{
+ 
+  
+    transition: .1s ease-in-out;
+}
+
+
+.bi-instagram,
+.bi-facebook,
+.bi-whatsapp{
+    transition: .1s ease-in-out;
+}
+
+.bi-instagram:hover{
+    color:deeppink;
+    transition: .1s ease-in-out;
+}
+.bi-facebook:hover{
+    color:royalblue;
+    transition: .1s ease-in-out;
+}
+.bi-whatsapp:hover{
+    color:#00bb2d;
+    transition: .1s ease-in-out;
+}
+
+
+.informacion{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.informacion p{
+    text-align: center;
+}

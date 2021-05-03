@@ -1,0 +1,100 @@
+.row {
+    margin: auto;
+}
+
+.col {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.card {
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.row .category_list {
+    padding-top: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.row .category_list .category_item{
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    color: white;
+    background: #46a2fd;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+
+.row .category_list .ct_item-active{
+    background: rgba(0,0,0,0.5);
+    color: white;
+    
+}
+
+
+.voting{
+    position: absolute;
+    top: 120px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    background: #ccc;
+    margin-bottom: 10px;
+}
+
+
+.voting input{
+    width: 50px;
+    border: none;
+    background: none;
+    color: #919191;
+    font-size: 30px;
+    margin-left: 10px;
+    pointer-events: none;
+}
+
+
+.voting button{
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.voting button:active{
+color: #004eff;
+    transform: scale(1.2);
+}
+
+
+
+.tienda{
+    width: 100%;
+    display: block;text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.tienda img{
+    width: 300px;
+    max-width: 100%;
+    margin: auto;
+}
+
