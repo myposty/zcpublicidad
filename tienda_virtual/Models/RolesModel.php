@@ -13,8 +13,18 @@
 		}
 	public function selectRoles()
 	{
+			//extrae roles
 		$sql = "SELECT * FROM rol WHERE status != 0 ";
 		$request = $this->select_all($sql);
+		return $request;
+	}
+
+	public function selectRol(int $idrol)
+	{
+		//buscar roles
+		$this->intIdrol = $idrol;
+		$sql = "SELECT * FROM rol WHERE idrol = $this->intIdrol";
+		$request = $this->select($sql);
 		return $request;
 	}
 
