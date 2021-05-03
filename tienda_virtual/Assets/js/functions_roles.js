@@ -92,6 +92,9 @@ function fntEditRol(){
 			document.querySelector('#btnActionForm').classList.replace("btn-primary","btn-info");
 			document.querySelector('#btnText').innerHTML ="Actualizar";
 
+			//obtener los datos a ser actualizados
+			
+
 			$('#modalFormRol').modal('show');
 		});
 	});
