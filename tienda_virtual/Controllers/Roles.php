@@ -64,19 +64,42 @@ class Roles extends Controllers{
 	}
 
 	public function setRol(){
+		$intIdRol = intval($_POST['idRol']);
 		$strRol = strClean($_POST['txtNombre']);
 		$strDescripcion = strClean($_POST['txtDescripcion']);
 		$intStatus = intVal($_POST['listStatus']);
 		$request_rol = $this->model->insertRol($strRol,$strDescripcion,$intStatus);
 
+		if($intIdRol == 0)
+		{
+			//crear
+			$request_rol = $this->model->insertRol($strRol, $strDescripcion, $intStatus);
+			$option = 1;
+		}else{
+			//Actualizar
+			$request_rol = $this->model->updateRol($intIdRol, $strRol, $strDescripcion, $intStatus);
+			$option = 2;
+		}
+
 
 		if($request_rol > 0)
 		{
-			$arrResponse = array('status' => true, 'msg' => 'Datos Guardados Correctamente');
+			if($option == 1)
+			{
+
+				$arrResponse = array('status' => true, 'msg' => 'Datos Guardados Correctamente');
+
+			}else{
+
+				$arrResponse = array('status' => true, 'msg' => 'Datos Actualizados Correctamente');
+			}
 
 		}else if($request_rol == 'exist'){
-			$arrResponse = array('status' => false, 'msg' => '¡Atención! El Rol ya existe');			
+
+			$arrResponse = array('status' => false, 'msg' => '¡Atención! El Rol ya existe');	
+
 		}else{
+
 			$arrResponse = array('status' => false, 'msg' => 'No es posible Guardar Los Datos');
 		}
 		echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
