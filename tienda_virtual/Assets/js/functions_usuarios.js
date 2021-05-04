@@ -5,7 +5,6 @@ function openModal(){
 			document.querySelector('#btnActionForm').classList.replace("btn-info","btn-primary");
 			document.querySelector('#btnText').innerHTML ="Guardar";
 			document.querySelector('#titleModal').innerHTML="Nuevo Usuario";
-			document.querySelector('#formusuario').reset();
-
-	$('#modalFormUsuario').modal('show');
+			document.querySelector('#formUsuario').reset();
+			$('#modalFormUsuario').modal('show');
 }
