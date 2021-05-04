@@ -1,5 +1,5 @@
 <?php 
-
+//====================================================//
 class Roles extends Controllers{
 	public function __construct()
 	{
@@ -104,7 +104,29 @@ class Roles extends Controllers{
 		}
 		echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
 		die();
-
 	}
+//======================================================================//
+	public function delRol()
+	{
+		if($_POST){
+			$intIdRol = intval($_POST['idrol']);
+			$requestDelete = $this->model->deleteRol($intIdRol);
+			if($requestDelete == 'ok')
+			{
+				$arrResponse = array('status'=> true, 'msg' => 'Se ha eliminado el rol');
+			}else if($requestDelete == 'exist'){
+				$arrResponse = array('status'=> false, 'msg' => 'No es posible Eliminar un Rol asociado a usuarios');
+			}else{
+				$arrResponse = array('status'=> false, 'msg' => 'Error al eliminar el rol');
+			}
+			echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+		}
+		die();
+	}
+
+
+
+
+	//======================================================================//
 }
  ?>
