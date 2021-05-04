@@ -155,9 +155,9 @@ function fntDelRol(){
 	 			if(isConfirm)
 	 			{
 	 				var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-	 				var ajaxDelRol = base_url+'/Roles/delRol/';
-	 				var strData = "idrol"+idrol;
-	 				request.open("POST",ajaxDelRol,true);
+	 				var ajaxUrl = base_url+'/Roles/delRol/';
+	 				var strData = "idrol="+idrol;
+	 				request.open("POST",ajaxUrl,true);
 	 				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 				request.send(strData);
 	 				request.onreadystatechange = function(){
@@ -165,7 +165,7 @@ function fntDelRol(){
 	 						var objData = JSON.parse(request.responseText);
 	 						if(objData.status)
 	 						{
-	 							swal("Eliminar", objData.msg, "success");
+	 							swal("Eliminar!", objData.msg , "success");
 	 							tableRoles.api().ajax.reload(function(){
 	 								fntEditRol();
 	 								fntDelRol();
