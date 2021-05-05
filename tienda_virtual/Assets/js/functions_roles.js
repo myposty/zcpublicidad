@@ -80,6 +80,7 @@ function openModal(){
 window.addEventListener('load', function(){
 	fntEditRol();
 	fntDelRol();
+	fntPermisos();
 }, false);
 
 
@@ -179,4 +180,29 @@ function fntDelRol(){
 	 		});
 	 	});
 	 });
+}
+
+
+
+function fntPermisos(){
+	var btnPermisosRol = document.querySelectorAll(".btnPermisosRol");
+	btnPermisosRol.forEach(function(btnPermisosRol){
+		btnPermisosRol.addEventListener('click', function(){
+
+			var idrol = this.getAttribute("rl");
+			var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+			var ajaxUrl = base_url+'/Permisos/getPermisosRol/'+idrol;
+			request.open("GET",ajaxUrl,true);
+			request.send();
+
+			request.onreadystatechange = function(){
+				if(request.status == 200){
+					console.log(request.responseText);
+					$('.modalPermisos').modal('show');
+				}
+			}
+
+
+		});
+	});
 }

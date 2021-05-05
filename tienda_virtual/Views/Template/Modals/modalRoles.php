@@ -47,4 +47,116 @@
   </div>
 </div>
         
+
+
+
+    <!--=======================================================================================-->
+
+    <!-- Extra large modal -->
+
+
+<div class="modal fade modalPermisos" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <h5 class="modal-title" >Permisos Roles de Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-abel="Close">
+          <span aria-hidden="true">X</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!------------------------------------------------------------->
+        <div class="col-md-12">
+          <div class="tile">
+            <form action="" id="formPermisos" name="formPermisos">  
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#</font></font></th>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modulo</font></font></th>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leer</font></font></th>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escribir</font></font></th>
+                    <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualizar</font></font></th>
+                    <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eliminar</font></font></th>
+                    <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuario</font></font></td>
+
+                      <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        <div class="toggle-flip">
+                          <label>
+                            <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                          </label>
+                        </div>
+                      </font></font></td>
+                      
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        <div class="toggle-flip">
+                          <label>
+                            <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                          </label>
+                        </div>
+                      </font></font></td>
+
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        <div class="toggle-flip">
+                          <label>
+                            <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                          </label>
+                        </div>
+                      </font></font></td>
+
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        <div class="toggle-flip">
+                          <label>
+                            <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                          </label>
+                        </div>
+                      </font></font></td>
+
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        <div class="toggle-flip">
+                          <label>
+                            <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                          </label>
+                        </div>
+                      </font></font></td>
+
+                       <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        <div class="toggle-flip">
+                          <label>
+                            <input type="checkbox"><span class="flip-indecator" data-toggle-on="ON" data-toggle-off="OFF"></span>
+                          </label>
+                        </div>
+                      </font></font></td>
+
+
+
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              <!-------------------------------------------------------->
+              <div class="text-center">
+                <button class="btn btn-success" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="fa fa-fw fa-lg fa-check-circle"></i>Guardar</font></font></button>
+
+                <button class="btn btn-danger" type="button" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="app-menu__icon fas fa-sign-out-alt"></i>Cerrar</font></font></button>
+              </div>
+            </form>
+            <!--------------------------------------------------------->
+          </div>
+        </div>
+        <!-------------------------------------------------------------->
+      </div>
+    
+    </div>
+  </div>
+</div>
  
