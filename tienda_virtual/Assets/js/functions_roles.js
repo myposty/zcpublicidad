@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function(){
 					swal("Roles de usuario", objData.msg,"success");
 					tableRoles.api().ajax.reload(function(){
 						fntEditRol();
+						fntDelRol();
+						fntPermisos();
+	
 					});
 				}else{
 					swal("Error", objData.msg, "error");
@@ -81,7 +84,7 @@ window.addEventListener('load', function(){
 	fntEditRol();
 	fntDelRol();
 	fntPermisos();
-	fntSavePermisos();
+	
 }, false);
 
 
@@ -170,7 +173,9 @@ function fntDelRol(){
 	 							swal("Eliminar!", objData.msg , "success");
 	 							tableRoles.api().ajax.reload(function(){
 	 								fntEditRol();
-	 								fntDelRol();
+									fntDelRol();
+									fntPermisos();
+	
 	 							});
 	 						}else{
 	 							swal("Atención!", objData.msg, "error");

@@ -26,9 +26,9 @@
                   <thead>
                     <tr>
                       <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#</font></font></th>
-                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modulo</font></font></th>
-                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leer</font></font></th>
-                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escribir</font></font></th>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Módulo</font></font></th>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver</font></font></th>
+                      <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crear</font></font></th>
                     <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualizar</font></font></th>
                     <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eliminar</font></font></th>
                     <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></th>
