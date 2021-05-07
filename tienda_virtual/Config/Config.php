@@ -4,7 +4,7 @@
 	const BASE_URL = "http://zcpublicidad.com/tienda_virtual";
 
 	//Zona horaria
-	date_default_timezone_set('America/Guatemala');
+	date_default_timezone_set('America/Asuncion');
 
 	//Datos de conexión a Base de Datos
 	const DB_HOST = "localhost";

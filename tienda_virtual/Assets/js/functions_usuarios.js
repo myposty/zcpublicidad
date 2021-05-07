@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
             "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
         },
         "ajax":{
-            "url": " "+base_url+"Usuarios/getUsuarios",
+            "url": " "+base_url+"/Usuarios/getUsuarios",
             "dataSrc":""
         },
         "columns":[
@@ -129,7 +129,6 @@ function fntViewUsuario(idpersona){
     var ajaxUrl = base_url+'/Usuarios/getUsuario/'+idpersona;
     request.open("GET",ajaxUrl,true);
     request.send();
-    
     request.onreadystatechange = function(){
         if(request.readyState == 4 && request.status == 200){
             var objData = JSON.parse(request.responseText);
@@ -213,7 +212,7 @@ function fntDelUsuario(idpersona){
         if (isConfirm) 
         {
             var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-            var ajaxUrl = base_url+'Usuarios/delUsuario';
+            var ajaxUrl = base_url+'/Usuarios/delUsuario';
             var strData = "idUsuario="+idUsuario;
             request.open("POST",ajaxUrl,true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
