@@ -2,6 +2,7 @@
     headerAdmin($data); 
     getModal('modalUsuarios',$data);
 ?>
+    <div id="contentAjax"></div> 
     <main class="app-content">
       <div class="app-title">
         <div>
@@ -11,9 +12,10 @@
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="<?= base_url(); ?>/usuarios"><?= $data['page_title'] ?></a></li>
+          <li class="breadcrumb-item"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>
         </ul>
       </div>
+
         <div class="row">
             <div class="col-md-12">
               <div class="tile">
@@ -25,8 +27,8 @@
                           <th>ID</th>
                           <th>Nombres</th>
                           <th>Apellidos</th>
+                          <th>Telefonos</th>
                           <th>Email</th>
-                          <th>Teléfono</th>
                           <th>Rol</th>
                           <th>Status</th>
                           <th>Acciones</th>
@@ -35,12 +37,12 @@
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>Carlos</td>
-                          <td>Henández</td>
-                          <td>carlos@info.com</td>
-                          <td>78542155</td>
-                          <td>Administrador</td>
-                          <td>Activo</td>
+                          <td>carlos</td>
+                          <td>hernandez</td>
+                          <td>8646847564</td>
+                          <td>carlos@haha</td>
+                          <td>administrador</td>
+                          <td>activo</td>
                           <td></td>
                         </tr>
                       </tbody>
