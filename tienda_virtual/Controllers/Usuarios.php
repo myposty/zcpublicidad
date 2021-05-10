@@ -24,7 +24,7 @@
 				{
 					$arrResponse = array("status" => false, "msg" => 'Datos incorrectos.');
 				}else{ 
-					//$idUsuario = intval($_POST['idUsuario']);
+					$idUsuario = intval($_POST['idUsuario']);
 					$strIdentificacion = strClean($_POST['txtIdentificacion']);
 					$strNombre = ucwords(strClean($_POST['txtNombre']));
 					$strApellido = ucwords(strClean($_POST['txtApellido']));
@@ -33,9 +33,8 @@
 					$intTipoId = intval(strClean($_POST['listRolid']));
 					$intStatus = intval(strClean($_POST['listStatus']));
 
-					if($idUsuario == 0)
-					{
-						$option = 1;
+		
+					
 						$strPassword =  empty($_POST['txtPassword']) ? hash("SHA256",passGenerator()) : hash("SHA256",$_POST['txtPassword']);
 						$request_user = $this->model->insertUsuario($strIdentificacion,
 																			$strNombre, 
@@ -45,33 +44,9 @@
 																			$strPassword, 
 																			$intTipoId, 
 																			$intStatus );
-					}//else{
-					// 	$option = 2;
-					// 	$strPassword =  empty($_POST['txtPassword']) ? "" : hash("SHA256",$_POST['txtPassword']);
-					// 	$request_user = $this->model->updateUsuario($idUsuario,
-					// 												$strIdentificacion, 
-					// 												$strNombre,
-					// 												$strApellido, 
-					// 												$intTelefono, 
-					// 												$strEmail,
-					// 												$strPassword, 
-					// 												$intTipoId, 
-					// 												$intStatus);
+					
 
-					// }
-
-					if($request_user > 0 )
-					{
-						if($option == 1){
-							$arrResponse = array('status' => true, 'msg' => 'Datos guardados correctamente.');
-						}else{
-							$arrResponse = array('status' => true, 'msg' => 'Datos Actualizados correctamente.');
-						}
-					}else if($request_user == 'exist'){
-						$arrResponse = array('status' => false, 'msg' => '¡Atención! el email o la identificación ya existe, ingrese otro.');		
-					}else{
-						$arrResponse = array("status" => false, "msg" => 'No es posible almacenar los datos.');
-					}
+			
 				}
 				echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
 			}
