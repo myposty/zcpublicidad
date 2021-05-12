@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-08-2020 a las 07:43:51
+-- Tiempo de generación: 22-08-2020 a las 07:05:19
 -- Versión del servidor: 8.0.18
 -- Versión de PHP: 7.3.12
 
@@ -172,14 +172,14 @@ INSERT INTO `permisos` (`idpermiso`, `rolid`, `moduloid`, `r`, `w`, `u`, `d`) VA
 DROP TABLE IF EXISTS `persona`;
 CREATE TABLE IF NOT EXISTS `persona` (
   `idpersona` bigint(20) NOT NULL AUTO_INCREMENT,
-  `indentificacion` varchar(30) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `identificacion` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_swedish_ci NOT NULL,
   `nombres` varchar(80) COLLATE utf8mb4_swedish_ci NOT NULL,
   `apellidos` varchar(100) COLLATE utf8mb4_swedish_ci NOT NULL,
   `telefono` bigint(20) NOT NULL,
   `email_user` varchar(100) COLLATE utf8mb4_swedish_ci NOT NULL,
-  `password` varchar(25) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `password` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_swedish_ci NOT NULL,
   `nit` varchar(20) COLLATE utf8mb4_swedish_ci NOT NULL,
-  `nombrefical` varchar(80) COLLATE utf8mb4_swedish_ci NOT NULL,
+  `nombrefiscal` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_swedish_ci NOT NULL,
   `direccionfiscal` varchar(100) COLLATE utf8mb4_swedish_ci NOT NULL,
   `toke` varchar(80) COLLATE utf8mb4_swedish_ci NOT NULL,
   `rolid` bigint(20) NOT NULL,
@@ -187,7 +187,19 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idpersona`),
   KEY `rolid` (`rolid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`idpersona`, `identificacion`, `nombres`, `apellidos`, `telefono`, `email_user`, `password`, `nit`, `nombrefiscal`, `direccionfiscal`, `toke`, `rolid`, `datecreated`, `status`) VALUES
+(1, '7897987987', 'Abel', 'OSH', 78454121, 'abel@info.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '', '', '', '', 1, '2020-08-13 00:51:44', 1),
+(2, '7865421565', 'Julio', 'Hernández', 789465487, 'julio@info.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '', '', '', '', 1, '2020-08-13 00:54:08', 1),
+(3, '879846545454', 'Pablo', 'Arana', 784858856, 'pablo@info.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '', '', '', '', 3, '2020-08-14 01:42:34', 2),
+(4, '65465465', 'Jorge', 'Arana', 987846545, 'jorge@info.com', '5eab4465b7e8c1118332a2a413a03c7d1bfcae606fd3e8cba3ad8cbf1b076996', '', '', '', '', 3, '2020-08-22 00:27:17', 1),
+(5, '4654654', 'Carme', 'Arana', 646545645, 'carmen@infom.com', 'be63ad947e82808780278e044bcd0267a6ac6b3cd1abdb107cc10b445a182eb0', '', '', '', '', 1, '2020-08-22 00:35:04', 1),
+(6, '8465484', 'Alex', 'Méndez', 4654654545, 'alex@info.com', '608cfa9ffc1dac43e8710cb23bbcf1d5215beee7ca8632c6a4a5a63a56f59aeb', '', '', '', '', 2, '2020-08-22 00:48:50', 1);
 
 -- --------------------------------------------------------
 
@@ -237,7 +249,7 @@ INSERT INTO `rol` (`idrol`, `nombrerol`, `descripcion`, `status`) VALUES
 (4, 'Servicio al cliente', 'Servicio al cliente sistema', 1),
 (5, 'Bodega', 'Bodega', 1),
 (6, 'Resporteria', 'Resporteria Sistema', 2),
-(7, 'Cliente', 'Clientes tienda', 1),
+(7, 'Cliente', 'Clientes tienda', 2),
 (8, 'Ejemplo rol', 'Ejemplo rol sitema', 0),
 (9, 'Coordinador', 'Coordinador', 0),
 (10, 'Consulta Ventas', 'Consulta Ventas', 0);
